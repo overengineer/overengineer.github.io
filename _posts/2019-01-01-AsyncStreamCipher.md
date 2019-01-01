@@ -30,7 +30,10 @@ Instructions in PicoBlaze has a constant cycle which is two clock periods. State
 	def stream_cipher(z):
 	  g = z ^ k
 	  c = g ^ m
-	  yield c	
+	  yield c
+	  
+	  
+
 ### Algorithm for LFSR
 	def lfsr(c):
 	  f = z | c
