@@ -51,7 +51,7 @@ def lfsr(c):
 ## Source Codes
 	
 ### Assembly Code
-```KCPSM
+```ASM
 NAMEREG	s0,	PUBLIC_KEY
 NAMEREG	s1,	MESSAGE
 NAMEREG	s2,	CIPHER
