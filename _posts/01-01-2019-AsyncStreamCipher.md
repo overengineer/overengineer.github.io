@@ -1,7 +1,11 @@
+---
+layout:post
+title: Self-Synchronous Stream Stream with LFSR on FPGA
+---
 
+# Self-Synchronous Stream Stream with LFSR on FPGA
 
-
-> Written with [StackEdit](https://stackedit.io/).# Introduction
+## Introduction
 
 ## Stream Ciphers
 Stream ciphers are described as a class of encryption algorithms that encrypt individual characters streaming continuously, contrast to block ciphers which are encrypting a bunch of characters at once. Stream ciphers tend to faster and simpler than block cipher and they are useful especially when buffering is limited. Additionally, they are useful in communication when dealing with errors in signal. 
