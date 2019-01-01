@@ -1,9 +1,7 @@
----
-layout: post
-title : Self-Synchronizing Stream Cipher with LFSR on FPGA 
----
 
-# Introduction
+
+
+> Written with [StackEdit](https://stackedit.io/).# Introduction
 
 ## Stream Ciphers
 Stream ciphers are described as a class of encryption algorithms that encrypt individual characters streaming continuously, contrast to block ciphers which are encrypting a bunch of characters at once. Stream ciphers tend to faster and simpler than block cipher and they are useful especially when buffering is limited. Additionally, they are useful in communication when dealing with errors in signal. 
@@ -90,3 +88,6 @@ Instructions in PicoBlaze has a constant cycle which is two clock periods. State
 ## RTL Scheme
 
 ## Implementation Results
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTYxNzIzMzUzMV19
+-->
