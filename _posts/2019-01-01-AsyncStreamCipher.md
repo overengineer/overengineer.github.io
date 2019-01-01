@@ -17,7 +17,7 @@ Linear feedback shift registers are a kind of shift register that have favorable
 I designed architecture of my system in two parts consisting of software and hardware. PicoBlaze microprocessor is used in order to reading the plaintext from file and encrypting it using the  key-stream read from external LFSR hardware. LFSR algorithm designed as a hardware component on the FPGA and implemented as a Verilog module.
 
 #### Characteristic polinomial:
- <img src="https://latex.codecogs.com/gif.latex?O_t=P(x)=x^8+x^6+x^5+x^4+1" /> 
+ <img src="https://latex.codecogs.com/gif.latex?P(x)=x^8+x^6+x^5+x^4+1" /> 
 ## Architecture
 
 ## PicoBlaze
