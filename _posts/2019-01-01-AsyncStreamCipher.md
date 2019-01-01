@@ -27,19 +27,23 @@ Instructions in PicoBlaze has a constant cycle which is two clock periods. State
 
 ## Pseudocode
 ### Algorithm for Stream Cipher
-	def stream_cipher(z):
-	  g = z ^ k
-	  c = g ^ m
-	  yield c
+```python
+def stream_cipher(z):
+  g = z ^ k
+  c = g ^ m
+  yield c
+```
 	  
 	  
 
 ### Algorithm for LFSR
-	def lfsr(c):
-	  f = z | c
-	  msb = f[0]^f[2]^f[3]^f[4]
-	  z = {msb, f >> 1}
-	  yield z
+```python
+def lfsr(c):
+  f = z | c
+  msb = f[0]^f[2]^f[3]^f[4]
+  z = {msb, f >> 1}
+  yield z
+```
 ## Flowchart
 	
 ## Algorithmic State Machine
@@ -47,38 +51,40 @@ Instructions in PicoBlaze has a constant cycle which is two clock periods. State
 ## Source Codes
 	
 ### Assembly Code
-	NAMEREG	s0,	PUBLIC_KEY
-	NAMEREG	s1,	MESSAGE
-	NAMEREG	s2,	CIPHER
-	NAMEREG	s5,	ram_addr
+```NASM
+NAMEREG	s0,	PUBLIC_KEY
+NAMEREG	s1,	MESSAGE
+NAMEREG	s2,	CIPHER
+NAMEREG	s5,	ram_addr
 
-	CONSTANT PUBLIC_KEY_ADDR,	00
-	CONSTANT DATA_START_ADDR,	01
-	CONSTANT DATA_END_ADDR,		FF
-	CONSTANT LFSR_ADDR,			00
-	CONSTANT PRIVATE_KEY,		54
+CONSTANT PUBLIC_KEY_ADDR,	00
+CONSTANT DATA_START_ADDR,	01
+CONSTANT DATA_END_ADDR,		FF
+CONSTANT LFSR_ADDR,			00
+CONSTANT PRIVATE_KEY,		54
 
-	start:
-		INPUT		PUBLIC_KEY,	PUBLIC_KEY_ADDR
-		LOAD		ram_addr, DATA_START_ADDR
-		OUTPUT   PUBLIC_KEY, LFSR_ADDR
-		JUMP     first	
-	
-	loop:
-		INPUT		MESSAGE, (ram_addr)
-		INPUT		CIPHER,	LFSR_ADDR
-		XOR		CIPHER,	PRIVATE_KEY
-		XOR		CIPHER, MESSAGE
-		OUTPUT	CIPHER, LFSR_ADDR
-	first:
-		;COMPARE	ram_addr, DATA_END_ADDR
-		;JUMP		Z, finish
-		ADD		ram_addr, 01
-		JUMP		loop
+start:
+	INPUT		PUBLIC_KEY,	PUBLIC_KEY_ADDR
+	LOAD		ram_addr, DATA_START_ADDR
+	OUTPUT   PUBLIC_KEY, LFSR_ADDR
+	JUMP     first	
 
-	finish:
-		OUTPUT	PUBLIC_KEY, LFSR_ADDR ; just to signal end of the process
-		JUMP finish            ; halt
+loop:
+	INPUT		MESSAGE, (ram_addr)
+	INPUT		CIPHER,	LFSR_ADDR
+	XOR		CIPHER,	PRIVATE_KEY
+	XOR		CIPHER, MESSAGE
+	OUTPUT	CIPHER, LFSR_ADDR
+first:
+	;COMPARE	ram_addr, DATA_END_ADDR
+	;JUMP		Z, finish
+	ADD		ram_addr, 01
+	JUMP		loop
+
+finish:
+	OUTPUT	PUBLIC_KEY, LFSR_ADDR ; just to signal end of the process
+	JUMP finish            ; halt
+```
 	
 
 ### Verilog Codes
