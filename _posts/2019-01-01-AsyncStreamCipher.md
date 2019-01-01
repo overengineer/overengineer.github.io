@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Self-Synchronous Stream Stream with LFSR on FPGA
+title: Async Stream Cipher on FPGA
 ---
 
 # Self-Synchronous Stream Stream with LFSR on FPGA
