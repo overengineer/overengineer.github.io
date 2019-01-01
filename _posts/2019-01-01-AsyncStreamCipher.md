@@ -1,5 +1,5 @@
 ---
-layout:post
+layout: post
 title: Self-Synchronous Stream Stream with LFSR on FPGA
 ---
 
