@@ -1,4 +1,7 @@
-
+---
+layout: post
+title : Self-Synchronizing Stream Cipher with LFSR on FPGA 
+---
 
 # Introduction
 
