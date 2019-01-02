@@ -50,6 +50,9 @@ def lfsr(c):
   z = {msb, f >> 1}
   yield z
 ```
+
+<div style="page-break-after: always;"></div>
+
 ## Flowchart
 	
 ## Algorithmic State Machine
@@ -92,6 +95,7 @@ finish:
 	JUMP finish            ; halt
 ```
 	
+<div style="page-break-after: always;"></div>
 
 ### Verilog Codes
 
