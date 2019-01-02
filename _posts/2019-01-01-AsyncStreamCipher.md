@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Async Stream Cipher on FPGA
