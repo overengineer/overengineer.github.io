@@ -3,8 +3,8 @@ layout: post
 title: Async Stream Cipher on FPGA
 ---
 
-> Implementation of Self-Synchronous Stream Cipher with LFSR on FPGA using PicoBlaze Microprocessor
-> You can access to source files at this repository: [/overengineer/AsyncStreamCipherLFSR](https://github.com/overengineer/AsyncStreamCipherLFSR)
+> Implementation of Self-Synchronous Stream Cipher with LFSR on FPGA using PicoBlaze Microprocessor.
+> You can access to the source files at [here](https://github.com/overengineer/AsyncStreamCipherLFSR).
 
 # Introduction
 For recent years IoT technologies have become very popular. For 2020, the installed base of Internet of Things devices is forecast to grow to almost 31 billion worldwide.[[1]](https://www.statista.com/statistics/471264/iot-number-of-connected-devices-worldwide/) It is undeniable security for devices that communicating with a worldwide network is a most. In my study, I experienced to design kind of a encryption algorithm that used for streaming continuous data. This project is done as final assignment of [Introduction to Embedded System course](https://web.itu.edu.tr/yalcinmust/ehb326.html).
