@@ -3,7 +3,7 @@ layout: post
 title: Async Stream Cipher on FPGA
 ---
 
-> Implementation of Self-Synchronous Stream Cipher with LFSR on FPGA using PicoBlaze Microprocessor.
+> This article explains implementation of Self-Synchronous Stream Cipher with LFSR on FPGA using PicoBlaze Microprocessor.
 > You can access to the source files at [here](https://github.com/overengineer/AsyncStreamCipherLFSR).
 
 # Introduction
