@@ -15,7 +15,6 @@ Self-synchronizing or asynchronous stream ciphers are defined as a subset of str
 
 ## Linear Feedback Shift Register
 [Linear feedback shift registers](http://www.eng.auburn.edu/~strouce/class/elec6250/LFSRs.pdf) are a kind of shift register that have favorable statistical properties when producing randomness is desired. They are also easily implemented on hardware.
-
 <div style="page-break-after: always;"></div>
 
 # Implementation Details
@@ -107,9 +106,4 @@ finish:
 ## Implementation Results
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbLTYxNzIzMzUzMV19
--->
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4MDY2MzkyLC02NjU3Mzg5MTcsLTYxNz
-IzMzUzMV19
 -->
