@@ -27,7 +27,7 @@ Self-synchronizing or asynchronous stream ciphers are defined as a subset of str
 I designed architecture of my system in two parts consisting of software and hardware. PicoBlaze microprocessor is used in order to reading the plain-text from file and encrypting it using the  key-stream read from external LFSR hardware. LFSR algorithm designed as a hardware component on the FPGA and implemented as a Verilog module. 
 
 #### Characteristic polinomial:
- <img src="https://latex.codecogs.com/gif.latex?P(x)=x^8+x^6+x^5+x^4+1" /> 
+ ![latex](https://latex.codecogs.com/gif.latex?P(x)=x^8+x^6+x^5+x^4+1)
  
 ## Architecture
 In my assignment, it was constraint of the project to use [PicoBlaze (KPCSM3)](https://www.xilinx.com/products/intellectual-property/picoblaze.html). Therefore, I implemented reading, encrypting and sending data as software to be run inside PicoBlaze. LFSR algorithm is requested to be implemented in hardware, so I implemented it as a Verilog module. PicoBlaze reads data from RAM and encrypts it using LFSR hardware, then sends it to the output port.
