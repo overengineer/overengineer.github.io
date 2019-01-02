@@ -17,6 +17,8 @@ Self-synchronizing or asynchronous stream ciphers are defined as a subset of str
 ## Linear Feedback Shift Register
 [Linear feedback shift registers](http://www.eng.auburn.edu/~strouce/class/elec6250/LFSRs.pdf) are a kind of shift register that have favorable statistical properties when producing randomness is desired. They are also easily implemented on hardware.
 
+<div style="page-break-after: always;"></div>
+
 # Implementation Details
 I designed architecture of my system in two parts consisting of software and hardware. PicoBlaze microprocessor is used in order to reading the plain-text from file and encrypting it using the  key-stream read from external LFSR hardware. LFSR algorithm designed as a hardware component on the FPGA and implemented as a Verilog module. 
 
@@ -109,5 +111,6 @@ eyJoaXN0b3J5IjpbLTYxNzIzMzUzMV19
 -->
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NTczODkxNywtNjE3MjMzNTMxXX0=
+eyJoaXN0b3J5IjpbLTc4MDY2MzkyLC02NjU3Mzg5MTcsLTYxNz
+IzMzUzMV19
 -->
