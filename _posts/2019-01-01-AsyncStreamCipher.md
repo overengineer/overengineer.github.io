@@ -1,3 +1,4 @@
+
 ---
 layout: post
 title: Async Stream Cipher on FPGA
@@ -5,20 +6,25 @@ title: Async Stream Cipher on FPGA
 
 > Implementation of Self-Synchronous Stream Cipher with LFSR on FPGA using PicoBlaze Microprocessor
 
-## Introduction
-
+# Introduction
+For recent years IoT technologies have become very popular. For 2020, the installed base of Internet of Things devices is forecast to grow to almost 31 billion worldwide.[[1]](https://www.statista.com/statistics/471264/iot-number-of-connected-devices-worldwide/) It is undeniable security for devices that communicating with a worldwide network is a most. In my study, I experienced to design kind of a encryption algorithm that used for streaming continuous data. This project is done as final assignment of [Introduction to Embedded System course](https://web.itu.edu.tr/yalcinmust/ehb326.html).
+# Theoretical Background
 ## Stream Ciphers
-Stream ciphers are described as a class of encryption algorithms that encrypt individual characters streaming continuously, contrast to block ciphers which are encrypting a bunch of characters at once. Stream ciphers tend to faster and simpler than block cipher and they are useful especially when buffering is limited. Additionally, they are useful in communication when dealing with errors in signal. 
+[Stream ciphers](http://cacr.uwaterloo.ca/hac/about/chap6.pdf) are described as a class of encryption algorithms that encrypt individual characters streaming continuously, contrast to block ciphers which are encrypting a bunch of characters at once. Stream ciphers tend to faster and simpler than block cipher and they are useful especially when buffering is limited. Additionally, they are useful in communication when dealing with errors in signal. 
 ## Self-Synchronizing Stream Cipher
-Self-synchronizing or asynchronous stream ciphers are defined as a subset of stream ciphers which their key-stream depends on the key and a certain number of previous ciphertext characters.
+Self-synchronizing or asynchronous stream ciphers are defined as a subset of stream ciphers which their key-stream depends on the key and a certain number of previous cipher-text characters.
+
 ## Linear Feedback Shift Register
-Linear feedback shift registers are a kind of shift register that have favorable statistical properties when producing randomness is desired. They are also easily implemented on hardware.
+[Linear feedback shift registers](http://www.eng.auburn.edu/~strouce/class/elec6250/LFSRs.pdf) are a kind of shift register that have favorable statistical properties when producing randomness is desired. They are also easily implemented on hardware.
+
 # Implementation Details
-I designed architecture of my system in two parts consisting of software and hardware. PicoBlaze microprocessor is used in order to reading the plaintext from file and encrypting it using the  key-stream read from external LFSR hardware. LFSR algorithm designed as a hardware component on the FPGA and implemented as a Verilog module.
+I designed architecture of my system in two parts consisting of software and hardware. PicoBlaze microprocessor is used in order to reading the plain-text from file and encrypting it using the  key-stream read from external LFSR hardware. LFSR algorithm designed as a hardware component on the FPGA and implemented as a Verilog module. 
 
 #### Characteristic polinomial:
  <img src="https://latex.codecogs.com/gif.latex?P(x)=x^8+x^6+x^5+x^4+1" /> 
+ 
 ## Architecture
+In my assignment, it was constraint of the project to use [PicoBlaze (KPCSM3)](https://www.xilinx.com/products/intellectual-property/picoblaze.html). Therefore, I implemented reading, encrypting and sending data as software to be run inside PicoBlaze. LFSR algorithm is requested to be implemented in hardware, so I implemented it as a Verilog module. PicoBlaze reads data from RAM and encrypts it using LFSR hardware, then sends it to the output port.
 
 ## PicoBlaze
 Instructions in PicoBlaze has a constant cycle which is two clock periods. State of the software running inside the processor can be determined outside by counting clock periods or by looking at read_strobe and write_strobe outputs. I have chosen the second method and designed a finite state machine to be implemented as hardware in the top module. I utilized write_strobe and read_strobe outputs to synchronizing the hardware and the software.
@@ -100,4 +106,8 @@ finish:
 ## Implementation Results
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbLTYxNzIzMzUzMV19
+-->
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTY2NTczODkxNywtNjE3MjMzNTMxXX0=
 -->
