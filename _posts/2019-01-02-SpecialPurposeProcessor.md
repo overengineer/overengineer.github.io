@@ -2,6 +2,8 @@
 layout: post
 title: Special Purpose Processor Design
 ---
+{% assign example = "test" %}
+{{ example }}
 
 # Design and Implementation of a Special Purpose Processor 
    
