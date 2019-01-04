@@ -30,7 +30,16 @@ I designed architecture of my system in two parts consisting of software and har
  ![latex](https://latex.codecogs.com/gif.latex?P(x)=x^8+x^6+x^5+x^4+1)
  
 ## Architecture
+
+![scheme1](https://raw.githubusercontent.com/overengineer/overengineer.github.io/master/images/scheme1.png)
+
 In my assignment, it was constraint of the project to use [PicoBlaze (KPCSM3)](https://www.xilinx.com/products/intellectual-property/picoblaze.html). Therefore, I implemented reading, encrypting and sending data as software to be run inside PicoBlaze. LFSR algorithm is requested to be implemented in hardware, so I implemented it as a Verilog module. PicoBlaze reads data from RAM and encrypts it using LFSR hardware, then sends it to the output port.
+
+
+## RTL Schematic
+
+![scheme2](https://raw.githubusercontent.com/overengineer/overengineer.github.io/master/images/scheme1.png)
+
 
 ## PicoBlaze
 Instructions in PicoBlaze has a constant cycle which is two clock periods. State of the software running inside the processor can be determined outside by counting clock periods or by looking at read_strobe and write_strobe outputs. I have chosen the second method and designed a finite state machine to be implemented as hardware in the top module. I utilized write_strobe and read_strobe outputs to synchronizing the hardware and the software.
@@ -114,6 +123,13 @@ finish:
 
 ## Simulation Waveforms
 
-## RTL Scheme
+![wave1](https://raw.githubusercontent.com/overengineer/overengineer.github.io/master/images/wave1.png)
 
-## Implementation Results
+![wave2](https://raw.githubusercontent.com/overengineer/overengineer.github.io/master/images/wave2.png)
+
+
+## Implementation Reports
+
+
+![util](https://raw.githubusercontent.com/overengineer/overengineer.github.io/master/images/util.png)
+
