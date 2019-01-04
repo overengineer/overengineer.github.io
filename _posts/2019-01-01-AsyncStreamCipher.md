@@ -38,7 +38,7 @@ In my assignment, it was constraint of the project to use [PicoBlaze (KPCSM3)](h
 
 ## RTL Schematic
 
-![scheme2](https://raw.githubusercontent.com/overengineer/overengineer.github.io/master/images/scheme1.png)
+![scheme2](https://raw.githubusercontent.com/overengineer/overengineer.github.io/master/images/scheme2.png)
 
 
 ## PicoBlaze
