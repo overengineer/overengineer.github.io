@@ -14,12 +14,11 @@ For recent years IoT technologies have become very popular. For 2020, the instal
 ## Self-Synchronizing Stream Cipher
 Self-synchronizing or asynchronous stream ciphers are defined as a subset of stream ciphers which their key-stream depends on the key and a certain number of previous cipher-text characters.
 
-![selfstream](https://i.imgur.com/Y5n2ygu.png?1)
-
 ## Linear Feedback Shift Register
 [Linear feedback shift registers](http://www.eng.auburn.edu/~strouce/class/elec6250/LFSRs.pdf) are a kind of shift register that have favorable statistical properties when producing randomness is desired. They are also easily implemented on hardware.
 
-![lfsr](https://i.imgur.com/jQ2xJOF.png)
+!![lfsr](https://raw.githubusercontent.com/overengineer/overengineer.github.io/master/images/lfsr.png)
+
 
 <div style="page-break-after: always;"></div>
 
