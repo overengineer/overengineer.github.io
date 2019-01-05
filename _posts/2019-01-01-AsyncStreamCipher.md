@@ -95,8 +95,8 @@ CONSTANT PRIVATE_KEY,		54
 start:
 	INPUT		PUBLIC_KEY,	PUBLIC_KEY_ADDR
 	LOAD		ram_addr, DATA_START_ADDR
-	OUTPUT   PUBLIC_KEY, LFSR_ADDR
-	JUMP     first	
+	OUTPUT  	PUBLIC_KEY, LFSR_ADDR
+	JUMP     	first	
 
 loop:
 	INPUT		MESSAGE, (ram_addr)
@@ -186,14 +186,14 @@ SSSC instr_memory (
 
 //state labels
 parameter DATA_WRITE 	 = 3'b000;
-parameter IDLE				 = 3'b001;
-parameter START			 = 3'b011; 
+parameter IDLE		 = 3'b001;
+parameter START		 = 3'b011; 
 parameter PUBKEY_READ	 = 3'b010; 
 //
 parameter PUBKEY_STORE	 = 3'b110; 
-parameter DATA_READ		 = 3'b111;
+parameter DATA_READ	 = 3'b111;
 parameter KEYSTREAM_READ = 3'b101;
-parameter CIPHER_OUT		 = 3'b100;
+parameter CIPHER_OUT	 = 3'b100;
 
 //state register
 reg [7:0] state;
@@ -232,7 +232,7 @@ end
 //continious assignments
 assign interrupt    = 0;
 assign ram_datain   = data_in;
-assign ram_res		  = 0;
+assign ram_res	    = 0;
 assign last         = ( port_id == 8'hFF );
 assign ram_wren     = conf & ~busy;
 assign ram_address  = ram_wren ? address_in : port_id;
@@ -255,12 +255,12 @@ always @( posedge clk or posedge res ) begin
 	end else begin
 		case(state)
 			IDLE				: begin
-				busy		     <= 0;
+				busy	      <= 0;
 				done          <= 0;
 				pico_res      <= start;
 				if ( pico_res ) begin				
 					pico_res      <= 0;
-					busy		     <= 1;
+					busy          <= 1;
 					select_input  <= RAM;	
 				end
 			end
