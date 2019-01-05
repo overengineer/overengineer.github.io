@@ -319,7 +319,7 @@ endmodule
 ```
 ## Explanation
 
-Top module instiantiates KCPSM3, RAM and LFSR modules and makes their connections. This module contains a finite state machine that changes connections of its submodules. States of the finite state machine inside the top module are changed according to binary outputs of the PicoBlaze instance write_stobe and read_strobe. LFSP module implements linear feedback shift register as keystream generator. It gets feedback from 
+Top module instiantiates KCPSM3, RAM and LFSR modules and makes their connections. This module contains a finite state machine that changes connections of its submodules. States of the finite state machine inside the top module are changed according to binary outputs of the PicoBlaze instance write_stobe and read_strobe. LFSP module implements linear feedback shift register as keystream generator. It gets feedback from cipher-text output of the PicoBlaze instance. LFSR updates its value when write_strobe output of KCPSM3 becomes 1. PicoBlaze reads data from both RAM and LFSR in different states. Therefore, finite state machine connects different wires to the input port at different states. DATA_WRITE state is added to be used when RAM content is intended to be written from outside.
 # Results
 
 ## Simulation Waveforms
@@ -333,4 +333,8 @@ Top module instiantiates KCPSM3, RAM and LFSR modules and makes their connection
 
 
 ![util](https://raw.githubusercontent.com/overengineer/overengineer.github.io/master/images/util.png)
+
+# Conclusion
+
+This project was a good experience for designing an embedded system and making hardware and software cooperate. This porject gave me a wide perspactive when looking at system design problems. I would like to thank Prof.Dr. Müştak Erhan Yalçın for his efforts.
 
