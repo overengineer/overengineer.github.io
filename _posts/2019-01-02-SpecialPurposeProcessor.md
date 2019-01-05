@@ -3,7 +3,7 @@ layout: post
 title: Special Purpose Processor Design
 ---
 
-> This article explains design and implementation of a Special Purpose Processor on FPGA. Source files can be accessed at the [here](https://github.com/overengineer/SpecialPurposeProcessor).  
+> This article explains design and implementation of a Special Purpose Processor on FPGA. Source files can be accessed at [here](https://github.com/overengineer/SpecialPurposeProcessor).  
 
 ## Introduction
    
