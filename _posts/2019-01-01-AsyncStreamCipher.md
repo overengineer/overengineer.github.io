@@ -72,7 +72,7 @@ def lfsr(c):
 ## Flowchart
 
 
-![flowchart](https://raw.githubusercontent.com/overengineer/overengineer.github.io/master/images/lfsrflowchart.svg)
+![flowchart](https://ezgif.com/svg-to-png?url=https://raw.githubusercontent.com/overengineer/overengineer.github.io/master/images/lfsrflowchart.svg)
 
 
 ## Algorithmic State Machine
