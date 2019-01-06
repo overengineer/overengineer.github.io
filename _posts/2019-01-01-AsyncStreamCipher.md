@@ -69,13 +69,11 @@ def lfsr(c):
 
 <div style="page-break-after: always;"></div>
 
-## Flowchart
-
+## Algorithmic State Machine
 
 ![flowchart](https://raw.githubusercontent.com/overengineer/overengineer.github.io/master/images/lfsrflowchart.png)
 
 
-## Algorithmic State Machine
 
 # Source Codes
 	
