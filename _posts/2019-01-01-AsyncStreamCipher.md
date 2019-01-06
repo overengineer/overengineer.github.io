@@ -95,5 +95,5 @@ Top module instiantiates KCPSM3, RAM and LFSR modules and makes their connection
 
 # Conclusion
 
-This project was a good experience for designing an embedded system and making hardware and software cooperate. This porject gave me a wide perspactive when looking at system design problems. I would like to thank Prof.Dr. Müştak Erhan Yalçın for his efforts.
+This project was a good experience for designing an embedded system and making hardware and software cooperate. This project gave me a wide perspective when looking at system design problems. I would like to thank Prof.Dr. Müştak Erhan Yalçın for his efforts.
 
