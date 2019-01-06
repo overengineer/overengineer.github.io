@@ -73,46 +73,6 @@ def lfsr(c):
 
 ![flowchart](https://raw.githubusercontent.com/overengineer/overengineer.github.io/master/images/lfsrflowchart.png)
 
-
-
-# Source Codes
-	
-## Assembly Code
-```
-NAMEREG	s0,	PUBLIC_KEY
-NAMEREG	s1,	MESSAGE
-NAMEREG	s2,	CIPHER
-NAMEREG	s5,	ram_addr
-
-CONSTANT PUBLIC_KEY_ADDR,	00
-CONSTANT DATA_START_ADDR,	01
-CONSTANT DATA_END_ADDR,		FF
-CONSTANT LFSR_ADDR,			00
-CONSTANT PRIVATE_KEY,		54
-
-start:
-	INPUT		PUBLIC_KEY,	PUBLIC_KEY_ADDR
-	LOAD		ram_addr, DATA_START_ADDR
-	OUTPUT  	PUBLIC_KEY, LFSR_ADDR
-	JUMP     	first	
-
-loop:
-	INPUT		MESSAGE, (ram_addr)
-	INPUT		CIPHER,	LFSR_ADDR
-	XOR		CIPHER,	PRIVATE_KEY
-	XOR		CIPHER, MESSAGE
-	OUTPUT	CIPHER, LFSR_ADDR
-first:
-	;COMPARE	ram_addr, DATA_END_ADDR
-	;JUMP		Z, finish
-	ADD		ram_addr, 01
-	JUMP		loop
-
-finish:
-	OUTPUT	PUBLIC_KEY, LFSR_ADDR ; just to signal end of the process
-	JUMP finish            ; halt
-```
-	
 <div style="page-break-after: always;"></div>
 
 
