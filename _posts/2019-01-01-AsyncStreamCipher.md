@@ -33,12 +33,12 @@ I designed architecture of my system in two parts consisting of software and har
 
 In my assignment, it was a constraint of the project to use [PicoBlaze (KPCSM3)](https://www.xilinx.com/products/intellectual-property/picoblaze.html). Therefore, I implemented reading, encrypting and sending data as software to be run inside PicoBlaze. LFSR algorithm is requested to be implemented in hardware, so I implemented it as a Verilog module. PicoBlaze reads data from RAM and encrypts it using LFSR hardware, then sends it to the output port.
 
-
+<div style="page-break-after: always;"></div>
 ## RTL Schematic
 
 ![scheme2](https://raw.githubusercontent.com/overengineer/overengineer.github.io/master/images/scheme2.png)
 
-
+<div style="page-break-after: always;"></div>
 ## PicoBlaze
 Instructions in PicoBlaze has a constant cycle which is two clock periods. State of the software running inside the processor can be determined outside by counting clock periods or by looking at read_strobe and write_strobe outputs. I have chosen the second method and designed a finite state machine to be implemented as hardware in the top module. I utilized write_strobe and read_strobe outputs for synchronizing the hardware and the software.
 
@@ -92,7 +92,7 @@ Top module instiantiates KCPSM3, RAM and LFSR modules and makes their connection
 
 
 ![util](https://raw.githubusercontent.com/overengineer/overengineer.github.io/master/images/util.png)
-
+<div style="page-break-after: always;"></div>
 # Conclusion
 
 This project was a good experience for designing an embedded system and making hardware and software cooperate. This project gave me a wide perspective when looking at system design problems. I would like to thank Prof.Dr. Müştak Erhan Yalçın for his efforts.
