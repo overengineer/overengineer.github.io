@@ -1,5 +1,18 @@
 <html>
 <head><meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+    <script>
+        function detectmob() {
+   if(window.innerWidth <= 800 || window.innerHeight <= 600) {
+     return true;
+   } else {
+     return false;
+   }
+}
+
+if (detectmob()){
+top.location.href="https://github.com/overengineer/overengineer.github.io/edit/master/content/CV.pdf";
+}
+    </script>
 <style type="text/css">
 <!--
     
@@ -12,21 +25,18 @@
     body {
         background-color: white;
         width: 848px;
-        padding:0; /*40px 20px 32px 20px;*/
-        margin:0;
         box-sizing: border-box;
         border: 5px solid rgb(70,143,153);
         -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
         color-adjust: exact !important;                 /*Firefox*/
     }
 }
+        padding:0; /*40px 20px 32px 20px;*/
+        margin:0;
 
-@media screen {
-    body {
-        min-height: 1200px;
-        max-width: 848px;
-        background-color: white;
-    }
+    
+    @media only screen and (max-width: 600px) {
+  
 }
 
 @page {
@@ -198,7 +208,7 @@ a {
         <div class="cls_profile">
             <img src="https://media.licdn.com/dms/image/C4D03AQHy-1GBQafQgA/profile-displayphoto-shrink_200_200/0?e=1551916800&v=beta&t=QqPMf6EaOQ16VMr7aRfM2FKcXBkM2_evMfdmFgAO1do" /> 
         </div>
-        <div>
+        <div class="cls_header">
         <!--<div style="align-text:right; width:400px; overflow:hidden;">-->
              <div class="cls_item"><span class="cls_name">ALPER SAID SOYLU</span></div>
              <div class="cls_item"><span class="cls_title">Senior Student at <br> Electronics and Communication Engineering <br> ITU</span></div>
