@@ -12,20 +12,21 @@
     body {
         background-color: white;
         width: 848px;
+        padding:0; /*40px 20px 32px 20px;*/
+        margin:0;
         box-sizing: border-box;
         border: 5px solid rgb(70,143,153);
         -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
         color-adjust: exact !important;                 /*Firefox*/
     }
 }
-        padding:0; /*40px 20px 32px 20px;*/
-        margin:0;
-
-    
-    @media only screen and (max-width: 600px) {
-  
+@media screen {
+    body {
+        min-height: 1200px;
+        max-width: 848px;
+        background-color: white;
+    }
 }
-
 @page {
     position : absolute;
     margin : 0;
@@ -34,8 +35,6 @@
     -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
     color-adjust: exact !important;                 /*Firefox*/
 }
-
-
 /* HEADER */
 .cls_name{
     font-family : Arial,serif;
@@ -51,6 +50,23 @@
     font-size   : 13em;
     font-style  : italic;
     color       : rgb(123,123,123);
+}
+    @media only screen and (max-width: 600px) {
+.cls_name{
+    font-family : Arial,serif;
+    font-size   : 17em;
+}
+.cls_title{
+    font-family : Arial,serif;
+    font-size   : 12em;
+    color       : rgb(70,143,153);
+}
+.cls_vision{
+    font-family : Arial,serif;
+    font-size   : 11em;
+    font-style  : italic;
+    color       : rgb(123,123,123);
+}
 }
 .cls_contact{
     position    : relative;
@@ -144,7 +160,6 @@ a {
     font-size       : 1px;
     text-align      : right;
 }
-
 .cls_boxes{
     position    : relative;
     margin-left : 5px;
@@ -183,8 +198,6 @@ a {
   display: table;
   clear: both;
 }
-
-
 -->
 </style>
 </head>
@@ -195,7 +208,7 @@ a {
         <div class="cls_profile">
             <img src="https://media.licdn.com/dms/image/C4D03AQHy-1GBQafQgA/profile-displayphoto-shrink_200_200/0?e=1551916800&v=beta&t=QqPMf6EaOQ16VMr7aRfM2FKcXBkM2_evMfdmFgAO1do" /> 
         </div>
-        <div class="cls_header">
+        <div>
         <!--<div style="align-text:right; width:400px; overflow:hidden;">-->
              <div class="cls_item"><span class="cls_name">ALPER SAID SOYLU</span></div>
              <div class="cls_item"><span class="cls_title">Senior Student at <br> Electronics and Communication Engineering <br> ITU</span></div>
@@ -205,37 +218,31 @@ a {
 </div>
 <div class="column" style="width:150px; float:right; margin-right: 10px;">
      <!--<div style="margin: 0px 5px 0px 0px; overflow:hidden;">-->
-
      <div class="cls_right">
         <span class="cls_contact"><a href="https://overengineer.github.io">overengineer.github.io</a></span>
         <span><a href="https://www.icons8.com"><img class="cls_icon" src="https://img.icons8.com/ios-glyphs/30/000000/geography.png"></a>
         </span>
      </div>
-
      <div class="cls_right">
         <span class="cls_contact"><a href="https://github.com/overengineer">/overengineer</a></span>
         <span><a href="https://www.icons8.com"><img class="cls_icon" src="https://img.icons8.com/ios-glyphs/30/000000/github.png"></a>
         </span>
      </div>
-
           <div class="cls_right">
         <span class="cls_contact"><a href="https://gitlab.com/alpersaidsoylu">/alpersaidsoylu</a></span>
         <span><a href="https://www.icons8.com"><img href="https://icons8.com/icon/79562/gitlab" class="cls_icon" src="https://img.icons8.com/windows/32/000000/gitlab.png"></a>
         </span>
      </div>
-
           <div class="cls_right">
         <span class="cls_contact"><a href="https://linkedin.com/in/alpersaidsoylu">/alpersaidsoylu</a></span>
         <span><a href="https://www.icons8.com"><img class="cls_icon" src="https://img.icons8.com/ios-glyphs/30/000000/linkedin.png"></a>
         </span>
      </div>
-
      <div class="cls_right">
         <span class="cls_contact" align="right"><a href="mailto:54alpersaid@gmail.com">54alpersaid@gmail.com</a></span>
         <span><a href="https://www.icons8.com"><img class="cls_icon" src="https://img.icons8.com/ios-glyphs/30/000000/gmail.png"></a>
         </span>
      </div>
-
      <div class="cls_right">
         <span class="cls_contact"><a href="tel:+905423376727">+905423376727</a></span>
         <span><a href="https://www.icons8.com"><img class="cls_icon" src="https://img.icons8.com/ios-glyphs/30/000000/iphone.png"></a>
@@ -253,7 +260,6 @@ a {
      <div class="cls_item"><span class="cls_description">Electronics and Communication Engineering</span></div>
      <div class="cls_item"><span class="cls_detail">2015-2019</span></div>
 </div>
-
 <div class="cls_container">
      <div class="cls_item"><span class="cls_section">EXPERIENCE</span>
      </div>
@@ -270,7 +276,6 @@ a {
      <div class="cls_item"><span class="cls_description">I have studied Java Language and basics of image processing and machine learning.</span></div>
      <div class="cls_item"><span class="cls_detail">2017</span></div>
 </div>
-
 <div class="cls_container">
      <div class="cls_item"><span class="cls_section">SKILLS</span></div>
    <div class="cls_item"><span class="cls_experience">Fields</span></div>
@@ -335,7 +340,6 @@ a {
         <span class="cls_skill">Academic Writing</span>  
      </div>
 </div>
-
 <div class="cls_container">
      <div class="cls_item"><span class="cls_section">LANGUAGES</span>
      </div>
@@ -348,10 +352,8 @@ a {
         <span class="cls_description">Academic reading-writing, fluency at speaking</span>
      </div>
  </div>
-
 </div>
 <div class="column">
-
 <div class="cls_container">
      <div class="cls_item"><span class="cls_section">AREAS OF INTEREST</span>
      </div>
