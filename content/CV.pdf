@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <script>
+ window.onload=()=>{document.getElementById('frame').print()}
+ </script>
+ </head>
+ <body>
+ <iframe src="https://cirriculumvitae.herokuapp.com/default" id="frame"></iframe>
+ </body>
+</html>
